@@ -1,0 +1,35 @@
+﻿@model Solar
+
+<br />
+<h2> Add a Solar Body</h2>
+<div class="form-container">
+    @using (Html.BeginForm("InsertBodyIntoDatabase", "Solar", "Post"))
+     {
+        <label asp-for="EnglishName" class="control-label">English Name</label>
+        <input type="text" name="EnglishName" class="form-control" />
+
+        <label asp-for="TypeOf" class="control-label">Type of Body</label>
+        <input type="text" name="TypeOf" class="form-control" />
+
+        <label asp-for="DistanceFrom" class="control-label">Distance from the Sun</label>
+        <input type="text" name="DistanceFrom" class="form-control" />
+
+        <label asp-for="Gravity" class="control-label">Gravity</label>
+        <input type="text" name="Gravity" class="form-control" />
+
+        <label asp-for="AverageTemp" class="control-label">Average Temperature</label>
+        <input type="text" name="AverageTemp" class="form-control" />
+
+        <label asp-for="Moons" class="control-label">Moons</label>
+        <input type="number" name="Moons" class="form-control" />
+
+        <label asp-for="DiscoveredBy" class="control-label">Discovered By</label>
+        <input type="text" name="DiscoveredBy" class="form-control" />
+
+        <br />
+        <input id="w_button" class="w_item" type="submit" value="Create Solar" />
+    }
+</div>
+<br />
+
+

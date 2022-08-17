@@ -1,0 +1,343 @@
+﻿html {
+    font-size: 14px;
+}
+
+@media (min-width: 750px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    background-color: RGB(56, 56, 56);
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: #F5F5F5;
+}
+
+h1, h2, h3{
+    text-align: center;
+    margin-top: 30px;
+    font-family: Bambi Bold, 'Times New Roman', Times, serif;
+    color: #F5F5F5;
+}
+
+/* For Search bar */
+
+#search-form {
+    display: flex;
+    justify-content: center;
+
+}
+
+#search-field {
+    border: 1px solid #F5F5F5;
+    border-radius: 15px;
+}
+
+#search-button {
+
+    color: #F5F5F5;
+    border-radius: 15px;
+}
+
+    #search-button:hover {
+        color: #046b99;
+        background-color: #F5F5F5;
+    }
+
+/*For Nav-Bars*/
+.top-nav {
+    position:fixed;
+    z-index: 999;
+    top: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 8px;
+    padding-left: 5%;
+    padding-right: 5%;
+    border-radius: 4px;
+    background-color: #232B2B;
+    border-bottom: 1px solid #F5F5F5;
+}
+
+nav ul li {
+    text-decoration: none;
+    list-style-type: none;
+    display: inline-block;
+    padding: 5px 10px;
+}
+
+.planet-nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    justify-content: center;
+}
+
+.w_item {
+    border: 2px solid #F5F5F5;
+    padding: 6px;
+    border-radius: 15px;
+    background-color: #232B2B;
+}
+
+.w_item:hover {
+    background-color: #F5F5F5;
+}
+
+
+#w_button {
+    font-family: Bambi Bold, 'Times New Roman', Times, serif;
+    color: #F5F5F5;
+}
+
+    #w_button:hover {
+        color: #D10000;
+    }
+
+a, .li-button {
+    background: none;
+    border: none;
+    font-family: Bambi Bold, 'Times New Roman', Times, serif;
+    color: #F5F5F5;
+    text-decoration: none;
+}
+
+    a:hover, .li-button:hover {
+        color: #046b99;
+        text-decoration: none;
+    }
+
+/* For Database*/
+.t_header {
+    color: #F5F5F5;
+}
+
+#t_data {
+    text-shadow: 2px 2px 8px black;
+}
+
+.t_Name, .t_Moons, .t_Discovered {
+    color: #F5F5F5;
+}
+
+.t_Type {
+    color: #F5F5F5;
+}
+
+.t_Temp {
+    color: #ffb830;
+}
+
+.t_Gravity {
+    color: #e0b26e;
+}
+
+.t_Distance {
+    color: #758D93;
+}
+
+.img-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.s-image {
+    object-fit: cover;
+    width: 350px;
+    height: 350px;
+    border: 1px solid #F5F5F5;
+    border-radius: 8px;
+}
+
+
+/*For API*/
+.N_title {
+    font-weight: bold;
+    align-items: center;
+    width: 30%;
+    color: #F5F5F5;
+    font-family: Bambi Bold, 'Times New Roman', Times, serif;
+    text-shadow: 2px 2px 8px black;
+    border-radius: 5px;
+}
+
+.N_copyright {
+    font-weight: bold;
+    float: right;
+    width: 30%;
+    color: #F5F5F5;
+    font-family: Bambi Bold, 'Times New Roman', Times, serif;
+    text-shadow: 2px 2px 8px black;
+    border-radius: 5px;
+}
+
+.N_paragraph {
+    color: #F5F5F5;
+    text-shadow: 2px 2px 8px black;
+    border-radius: 5px;
+}
+
+.N_img {
+    font-weight: bold;
+    color: #F5F5F5;
+    text-shadow: 2px 2px 8px black;
+    align-content: center;
+    max-height: 500px;
+    max-width: 750px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 8px #046b99;
+    max-width: 100%;
+}
+
+
+.border-top {
+    border-top: 1px solid #e5e5e5;
+}
+
+.border-bottom {
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.box-shadow {
+    box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+button.accept-policy {
+    font-size: 1rem;
+    line-height: inherit;
+}
+
+/*For Form*/
+.form-container {
+    text-align:center;
+    display: flex;
+    justify-content: center;
+}
+.control-label {
+    margin-top: 10px;
+    margin-bottom: -5px;
+    color: #F5F5F5;
+    text-shadow: 2px 2px 8px black;
+    text-align: center;
+}
+.form-control {
+   color: black;
+   font-weight: bold;
+   border: 2px solid black;
+   background-color: #D9DDDC;
+}
+
+/* For Login Modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+    padding-top: 60px;
+}
+
+.log-modal {
+    text-align: center;
+}
+
+.wng {
+    color: red;
+}
+
+/* Modal Content/Box */
+.modal-content {
+    padding-left: 8px;
+    background-color: #232B2B;
+    margin: 5px auto;
+    border: 1px solid #F5F5F5;
+    width: 65%;
+}
+
+/* The Close Button */
+.close {
+    position: absolute;
+    right: 25px;
+    top: 0;
+    color: #000;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+    .close:hover,
+    .close:focus {
+        color: red;
+        cursor: pointer;
+    }
+
+.animate {
+    -webkit-animation: animatezoom 0.6s;
+    animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+    from {
+        -webkit-transform: scale(0)
+    }
+
+    to {
+        -webkit-transform: scale(1)
+    }
+}
+
+@keyframes animatezoom {
+    from {
+        transform: scale(0)
+    }
+
+    to {
+        transform: scale(1)
+    }
+}
+
+/* Footer */
+.footer {
+    background-color: #232B2B;
+    text-align: right;
+    position: absolute;
+    margin-top: 10px;
+    bottom: 0;
+    width: 100%;
+    white-space: nowrap;
+    line-height: 40px;
+    border-radius: 4px;
+    border-top: 1px solid #F5F5F5;
+}
+
+
+
+.footer-container {
+    font-size: 10px;
+    font-family: Bambi Bold, 'Times New Roman', Times, serif;
+    color: #F5F5F5;
+    padding-right: 10px;
+}
+
+    .footer-container:hover {
+        color: #dd361c;
+    }
+
+@media (max-width: 640px) {
+} 
+
+

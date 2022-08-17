@@ -1,0 +1,73 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Solar Database </title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/NASA_Project.styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="http://fonts.cdnfonts.com/css/bambi" />
+</head>
+
+<body>
+    <header>
+        <nav class="top-nav">
+            <h1 class="logo"></h1>
+            <ul>
+                <li class="bar"><a asp-controller="Home" asp-action="Index">HOME</a></li>
+                <li class="bar"><a asp-controller="Solar" asp-action="SolarIndex">DATABASE</a></li>
+                <li class="bar"><a href="#">PORTFOLIO PAGE</a></li>
+                <li><button class="li-button" onclick="document.getElementById('id01').style.display='block'">LOGIN</button></li>
+            </ul>
+        </nav>
+
+        <!--Modal-->
+        <div id="id01" class="modal">
+
+            <!--Modal Container-->
+            <form class="modal-content animate" action="/action_page.php">
+                <div class="container">
+                    <label for="uname"><b>Username</b></label>
+                    <input type="text" placeholder="Enter Username" name="uname" required>
+
+                    <label for="psw"><b>Password</b></label>
+                    <input type="password" placeholder="Enter Password" name="psw" required>
+
+                    <button class="li-button" type="submit">Login</button>
+                    <p class="log-modal"><b class="wng">Warning:</b> Trying to actually login will crash the website.</p>
+                </div>
+            </form>
+        </div>
+    </header>
+    <br />
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+    <br />
+    <footer class="footer">
+        <div class="footer-container">
+            &copy; 2022 - Project - Corey Reid
+        </div>
+    </footer>
+
+    <script> //Modal script
+        var modal = document.getElementById('id01');
+        window.onclick = function (event)
+        {
+            if (event.target == modal)
+            {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+
+    @await RenderSectionAsync("Scripts", required: false)
+
+</body>
+</html>

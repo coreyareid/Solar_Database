@@ -1,0 +1,85 @@
+﻿@model IEnumerable<Solar>
+
+@{
+    ViewData["Title"] = "DATABASE";
+}
+
+<br />
+
+@foreach (var body in Model)
+{
+    <h2>@body.EnglishName</h2>
+}
+
+<table class="table">
+    <tr>
+        <th class="t_header">Type of Body</th>
+        <th class="t_header">Distance from Sun</th>
+        <th class="t_header">Gravity</th>
+        <th class="t_header">Average Temperature</th>
+        <th class="t_header">Moons</th>
+        <th class="t_header">Discovered By</th>
+    </tr>
+
+    @foreach (var body in Model)
+    {
+        <tr>
+            <td id="t_data" class="t_Type">@body.TypeOf</td>
+            <td id="t_data" class="t_Distance">@body.DistanceFrom</td>
+            <td id="t_data" class="t_Gravity">@body.Gravity</td>
+            <td id="t_data" class="t_Temp">@body.AverageTemp</td>
+            <td id="t_data" class="t_Moons">@body.Moons</td>
+            <td id="t_data" class="t_Discovered">@body.DiscoveredBy</td>
+        </tr>
+    }
+</table>
+
+<div class="img-container">
+
+    @foreach (var body in Model)
+    {
+        @switch (body.EnglishName)
+        {
+            case "Mercury":
+                <img class="s-image" src="https://solarsystem.nasa.gov/system/resources/detail_files/771_PIA16853.jpg" />
+                break;
+
+            case "Venus":
+                <img class="s-image" src="https://solarsystem.nasa.gov/system/resources/detail_files/688_Venus.jpg" />
+                break;
+
+            case "Earth":
+                <img class="s-image" src="https://www.nasa.gov/sites/default/files/styles/full_width_feature/public/thumbnails/image/187_1003705_americas_dxm.png" />
+                break;
+
+            case "Mars":
+                <img class="s-image" src="https://mars.nasa.gov/system/news_items/main_images/8888_mars20130708-web.jpg" />
+                break;
+
+            case "Jupiter":
+                <img class="s-image" src="https://solarsystem.nasa.gov/system/resources/detail_files/2486_stsci-h-p1936a_1800.jpg" />
+                break;
+
+            case "Saturn":
+                <img class="s-image" src="https://solarsystem.nasa.gov/system/resources/detail_files/2490_stsci-h-p1943a-f_1200.jpg" />
+                break;
+
+            case "Uranus":
+                <img class="s-image" src="https://solarsystem.nasa.gov/system/resources/detail_files/599_PIA18182.jpg" />
+                break;
+
+            case "Neptune":
+                <img class="s-image" src="https://solarsystem.nasa.gov/system/resources/detail_files/768_oct_1_2015_flare.jpg" />
+                break;
+
+            case "Pluto":
+                <img class="s-image" src="https://solarsystem.nasa.gov/system/resources/detail_files/933_BIG_P_COLOR_2_TRUE_COLOR1_1980.jpg" />
+                break;
+
+            case "Sun":
+                <img class="s-image" src="https://solarsystem.nasa.gov/system/resources/detail_files/476_VenusTransitApproach1200w.jpg" />
+                break;
+        }
+    }
+</div>
+

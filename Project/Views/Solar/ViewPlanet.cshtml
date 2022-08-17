@@ -1,0 +1,87 @@
+﻿@model Solar
+
+<br />
+<h3>@Model.EnglishName</h3>
+
+<table class="table">
+
+    <tr>
+        <th class="t_header">Type of Body</th>
+        <th class="t_header">Distance From Sun</th>
+        <th class="t_header">Gravity</th>
+        <th class="t_header">Average Temperature</th>
+        <th class="t_header">Moons</th>
+        <th class="t_header">Discovered By</th>
+    </tr>
+    <tr>
+        <td id="t_data" class="t_Type">@Model.TypeOf</td>
+        <td id="t_data" class="t_Distance">@Model.DistanceFrom</td>
+        <td id="t_data" class="t_Gravity">@Model.Gravity</td>
+        <td id="t_data" class="t_Temp">@Model.AverageTemp</td>
+        <td id="t_data" class="t_Moons">@Model.Moons</td>
+        <td id="t_data" class="t_Discovered">@Model.DiscoveredBy</td>
+    </tr>
+</table>
+
+<div class="img-container">
+    @switch (Model.EnglishName)
+    {
+        case "Mercury":
+            <img class="s-image" src="https://solarsystem.nasa.gov/system/resources/detail_files/771_PIA16853.jpg" />
+            break;
+
+        case "Venus":
+            <img class="s-image" src="https://solarsystem.nasa.gov/system/resources/detail_files/688_Venus.jpg" />
+            break;
+
+        case "Earth":
+            <img class="s-image" src="https://www.nasa.gov/sites/default/files/styles/full_width_feature/public/thumbnails/image/187_1003705_americas_dxm.png" />
+            break;
+
+        case "Mars":
+            <img class="s-image" src="https://mars.nasa.gov/system/news_items/main_images/8888_mars20130708-web.jpg" />
+            break;
+
+        case "Jupiter":
+            <img class="s-image" src="https://solarsystem.nasa.gov/system/resources/detail_files/2486_stsci-h-p1936a_1800.jpg" />
+            break;
+
+        case "Saturn":
+            <img class="s-image" src="https://solarsystem.nasa.gov/system/resources/detail_files/2490_stsci-h-p1943a-f_1200.jpg" />
+            break;
+
+        case "Uranus":
+            <img class="s-image" src="https://solarsystem.nasa.gov/system/resources/detail_files/599_PIA18182.jpg" />
+            break;
+
+        case "Neptune":
+            <img class="s-image" src="https://solarsystem.nasa.gov/system/resources/detail_files/768_oct_1_2015_flare.jpg" />
+            break;
+
+        case "Pluto":
+            <img class="s-image" src="https://solarsystem.nasa.gov/system/resources/detail_files/933_BIG_P_COLOR_2_TRUE_COLOR1_1980.jpg" />
+            break;
+
+        case "Sun":
+            <img class="s-image" src="https://solarsystem.nasa.gov/system/resources/detail_files/476_VenusTransitApproach1200w.jpg" />
+            break;
+    }
+</div>
+
+<nav class="planet-nav">
+    <ul>
+        <li class="bar2">
+            <a class="w_item" href="/Solar/UpdateInfo/@Model.BodyID">Update Solar Body</a>
+        </li>
+
+        <li class="bar2">
+            @using (Html.BeginForm("RemoveBody", "Solar", "Post"))
+            {
+                <input type="hidden" asp-for="BodyID" value="@Model.BodyID" />
+                <input class="w_item " id="w_button" type="submit" onclick="return confirm('Ensure solar body information is incorrect before deleting from the database')"
+                       value="Remove solar Body" />
+            }
+        </li>
+    </ul>
+</nav>
+<br />

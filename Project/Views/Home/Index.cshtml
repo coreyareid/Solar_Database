@@ -1,0 +1,23 @@
+﻿@model Potd
+
+@{
+    ViewData["Title"] = "Home";
+}
+
+<br />
+<div class="text-center">
+    <h1 class="display-4"> Solar Database </h1>
+    <br />
+    <form id="search-form" class="form-inline my-2 my-lg-0">
+        <div class="input-group mb-2 mr-sm-2">
+            <input id="search-field"class="form-control mr-sm-2" type="search" placeholder="search database" aria-label="Search" name="SearchPhrase">
+            <button id="search-button" asp-action="ShowSearchResults" asp-controller="Solar" class="btn btn-outline-success my-2 my-sm-0" type="submit" value="Search">Search</button>
+        </div>
+    </form>
+    <br />
+    <p class="N_title">@Model.PicTitle</p>
+    <p class="N_paragraph">@Model.Explanation</p>
+    <p class="N_copyright">@Model.CopyRight</p>
+    <img class="N_img" src="@Model.NoramlPicUrl" alt="LINK BROKEN" />
+</div>
+<br />

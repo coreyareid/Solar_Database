@@ -1,0 +1,48 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Newtonsoft.Json" />
+    <None Remove="Dapper" />
+    <None Remove="MySql.Data" />
+    <None Remove="Views\Solar\" />
+    <None Remove="Properties\launchSettings.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+    <PackageReference Include="Dapper" Version="2.0.123" />
+    <PackageReference Include="MySql.Data" Version="8.0.30" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Views\Solar\" />
+    <Folder Include="wwwroot\Images\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Remove="wwwroot\Images\Earth.jpg" />
+    <Content Remove="wwwroot\Images\Jupiter.jpg" />
+    <Content Remove="wwwroot\Images\Mars.jpg" />
+    <Content Remove="wwwroot\Images\Merc.jpg" />
+    <Content Remove="wwwroot\Images\Neptune.jpg" />
+    <Content Remove="wwwroot\Images\Pluto.jpg" />
+    <Content Remove="wwwroot\Images\Saturn.jpg" />
+    <Content Remove="wwwroot\Images\Sun.jpg" />
+    <Content Remove="wwwroot\Images\Uranus.jpg" />
+    <Content Remove="wwwroot\Images\Venus.jpg" />
+    <Content Remove="wwwroot\Images\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="wwwroot\Images\Earth.jpg" />
+    <None Include="wwwroot\Images\Jupiter.jpg" />
+    <None Include="wwwroot\Images\Mars.jpg" />
+    <None Include="wwwroot\Images\Merc.jpg" />
+    <None Include="wwwroot\Images\Neptune.jpg" />
+    <None Include="wwwroot\Images\Pluto.jpg" />
+    <None Include="wwwroot\Images\Saturn.jpg" />
+    <None Include="wwwroot\Images\Sun.jpg" />
+    <None Include="wwwroot\Images\Uranus.jpg" />
+    <None Include="wwwroot\Images\Venus.jpg" />
+  </ItemGroup>
+</Project>

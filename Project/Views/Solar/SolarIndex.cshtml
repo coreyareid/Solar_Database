@@ -1,0 +1,42 @@
+﻿@model IEnumerable<Solar>
+
+@{
+    ViewData["Title"] = "DATABASE";
+}
+
+<br />
+<h2> SOLAR BODIES </h2>
+
+<p>Click on BodyID number for individual information.</p>
+<table class="table">
+    <tr>
+        <th class="t_header">BodyID</th>
+        <th class="t_header">English Name</th>
+        <th class="t_header">Type of Body</th>
+        <th class="t_header">Distance from Sun</th>
+        <th class="t_header">Gravity</th>
+        <th class="t_header">Average Temperature</th>
+        <th class="t_header">Moons</th>
+        <th class="t_header">Discovered By</th>
+    </tr>
+
+    @foreach (var body in Model)
+        {
+
+            <tr>
+                <td id="t_data" class="t_ID"><a href="/Solar/ViewPlanet/@body.BodyID">@body.BodyID</a></td>
+                <td id="t_data" class="t_Name">@body.EnglishName</td>
+                <td id="t_data" class="t_Type">@body.TypeOf</td>
+                <td id="t_data" class="t_Distance">@body.DistanceFrom</td>
+                <td id="t_data" class="t_Gravity">@body.Gravity</td>
+                <td id="t_data" class="t_Temp">@body.AverageTemp</td>
+                <td id="t_data" class="t_Moons">@body.Moons</td>
+                <td id="t_data" class="t_Discovered">@body.DiscoveredBy</td>
+            </tr>
+        }
+</table>
+
+<div class="form-container" style="display: block">
+    <a class="w_item" href="/Solar/InsertBody"> Add A Discovered Solar Body</a>
+</div>
+<br />
